@@ -96,21 +96,21 @@ export class AppFooter extends HTMLElement {
               </li>
               <li>
                 <a
-                  href="#!"
+                  href="./sign-up.html"
                   class="underline-offset-5 [text-decoration-skip-ink:none] hover:underline active:underline active:opacity-85"
                   >Login / Register</a
                 >
               </li>
               <li>
                 <a
-                  href="#!"
+                  href="./cart.html"
                   class="underline-offset-5 [text-decoration-skip-ink:none] hover:underline active:underline active:opacity-85"
                   >Cart</a
                 >
               </li>
               <li>
                 <a
-                  href="#!"
+                  href="./wishlist.html"
                   class="underline-offset-5 [text-decoration-skip-ink:none] hover:underline active:underline active:opacity-85"
                   >Wishlist</a
                 >
