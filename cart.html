@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore exclusive deals, flash sales, trending categories, and best-selling products at our online store. Shop quality products at great prices."
+    />
+
+    <title>Exclusive — Shop Smarter, Live Better</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./assets/css/output.css" />
+
+    <!-- Script -->
+    <script type="module" src="./src/js/global.js"></script>
+    <script type="module">
+      import { initCartActions } from "./src/js/cart.js";
+      initCartActions();
+    </script>
+  </head>
+
+  <body class="font-primary bg-secondary">
+    <app-header></app-header>
+
+    <main class="@container/layout container mt-20">
+      <h1 class="sr-only">Your Shopping Cart</h1>
+
+      <nav
+        aria-label="Breadcrumb"
+        class="text-md text-primary/50 mb-10 md:mb-20"
+      >
+        <ol class="flex items-center gap-3">
+          <li>
+            <a href="/" class="hover:text-primary">Home</a>
+          </li>
+          <li>/</li>
+          <li class="text-primary">Cart</li>
+        </ol>
+      </nav>
+
+      <form id="cart-form" action="" method="POST" class="mb-10 md:mb-20">
+        <div
+          class="bg-secondary text-primary mb-10 hidden grid-cols-4 rounded-sm px-10 py-6 text-base shadow-[0_1px_13px_rgba(0,0,0,0.05)] md:grid"
+        >
+          <span>Product</span>
+          <span class="text-center">Price</span>
+          <span class="text-center">Quantity</span>
+          <span class="text-right">Subtotal</span>
+        </div>
+
+        <ul
+          id="cart-item-list"
+          class="text-primary mb-6 flex flex-col gap-10 text-base"
+        >
+          <li
+            class="flex items-start justify-center gap-6 rounded-sm p-6 shadow-[0_1px_13px_rgba(0,0,0,0.05)] md:justify-start lg:px-10"
+          >
+            <div class="relative aspect-50/39 w-12.5 md:hidden">
+              <img
+                src="./assets/images/screen.webp"
+                alt=""
+                class="max-h-full object-contain"
+                width="510"
+                height="387"
+              />
+
+              <button
+                type="button"
+                aria-label="Remove LCD Monitor from cart"
+                class="text-secondary bg-accent group absolute top-0 left-0 flex size-4.5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full transition hover:size-5 hover:scale-110 active:scale-[0.96]"
+              >
+                <svg
+                  class="size-2 transition group-hover:size-2.5"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 7L4 4M7 1L3.99943 4M3.99943 4L1 1M4 4L7 7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div
+              class="flex flex-col items-start gap-3 md:grid md:w-full md:grid-cols-4 md:items-center md:gap-0"
+            >
+              <div class="md:flex md:items-center md:gap-5.5">
+                <div class="relative hidden aspect-50/39 w-12.5 md:block">
+                  <img
+                    src="./assets/images/screen.webp"
+                    alt=""
+                    class="max-h-full object-contain"
+                    width="510"
+                    height="387"
+                  />
+
+                  <button
+                    type="button"
+                    aria-label="Remove LCD Monitor from cart"
+                    class="text-secondary bg-accent group absolute top-0 left-0 flex size-4.5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full transition hover:size-5 hover:scale-110 active:scale-[0.96]"
+                  >
+                    <svg
+                      class="size-2 transition group-hover:size-2.5"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 7L4 4M7 1L3.99943 4M3.99943 4L1 1M4 4L7 7"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <a
+                  href="#!"
+                  class="underline-offset-3 [text-decoration-skip-ink:none] hover:underline active:opacity-70"
+                >
+                  LCD Monitor
+                </a>
+              </div>
+
+              <data value="650" class="text-center">$650</data>
+
+              <div class="flex justify-center">
+                <div
+                  class="border-primary/40 flex h-9 w-30 items-center rounded-sm border-[1.5px] px-3 md:h-11 md:w-18 md:items-stretch"
+                >
+                  <button
+                    type="button"
+                    aria-label="Decrease quantity"
+                    class="hover:text-accent active:text-accent flex size-5 shrink-0 items-center justify-center active:scale-110 md:hidden"
+                  >
+                    <svg
+                      class="size-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 12H19"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <label for="qty-screen" class="sr-only">
+                    Quantity for LCD Monitor
+                  </label>
+                  <input
+                    type="number"
+                    id="qty-screen"
+                    name="quantities[screen]"
+                    value="1"
+                    min="1"
+                    max="999"
+                    class="hide-spinners w-full bg-transparent text-center"
+                  />
+                  <button
+                    type="button"
+                    aria-label="Increase quantity"
+                    class="hover:text-accent active:text-accent flex size-5 shrink-0 items-center justify-center active:scale-110 md:hidden"
+                  >
+                    <svg
+                      class="size-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 5V19M5 12H19"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <div class="hidden shrink-0 flex-col justify-center md:flex">
+                    <button
+                      type="button"
+                      aria-label="Increase quantity"
+                      class="hover:text-accent active:text-accent flex size-4 items-center justify-center active:-translate-y-px"
+                    >
+                      <svg
+                        width="9"
+                        height="6"
+                        viewBox="0 0 9 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.24267 1.88533L0.942667 5.18533L0 4.24267L4.24267 0L8.48533 4.24267L7.54267 5.18533L4.24267 1.88533Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      aria-label="Decrease quantity"
+                      class="hover:text-accent active:text-accent flex size-4 items-center justify-center active:translate-y-px"
+                    >
+                      <svg
+                        width="9"
+                        height="6"
+                        viewBox="0 0 9 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.24268 3.3L7.54268 0L8.48535 0.942666L4.24268 5.18533L1.71661e-05 0.942666L0.942683 0L4.24268 3.3Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <output
+                name="subtotal-screen"
+                for="qty-screen"
+                class="self-end font-semibold md:self-auto md:text-right md:font-normal"
+              >
+                $650
+              </output>
+            </div>
+          </li>
+
+          <li
+            class="flex items-start justify-center gap-6 rounded-sm p-6 shadow-[0_1px_13px_rgba(0,0,0,0.05)] md:justify-start lg:px-10"
+          >
+            <div class="relative aspect-50/39 w-12.5 md:hidden">
+              <img
+                src="./assets/images/gamepad.webp"
+                alt=""
+                class="max-h-full object-contain"
+                width="516"
+                height="456"
+              />
+
+              <button
+                type="button"
+                aria-label="Remove H1 Gamepad from cart"
+                class="text-secondary bg-accent group absolute top-0 left-0 flex size-4.5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full transition hover:size-5 hover:scale-110 active:scale-[0.96]"
+              >
+                <svg
+                  class="size-2 transition group-hover:size-2.5"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 7L4 4M7 1L3.99943 4M3.99943 4L1 1M4 4L7 7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div
+              class="flex flex-col items-start gap-3 md:grid md:w-full md:grid-cols-4 md:items-center md:gap-0"
+            >
+              <div class="md:flex md:items-center md:gap-5.5">
+                <div class="relative hidden aspect-50/39 w-12.5 md:block">
+                  <img
+                    src="./assets/images/gamepad.webp"
+                    alt=""
+                    class="max-h-full object-contain"
+                    width="516"
+                    height="456"
+                  />
+
+                  <button
+                    type="button"
+                    aria-label="Remove H1 Gamepad from cart"
+                    class="text-secondary bg-accent group absolute top-0 left-0 flex size-4.5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full transition hover:size-5 hover:scale-110 active:scale-[0.96]"
+                  >
+                    <svg
+                      class="size-2 transition group-hover:size-2.5"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 7L4 4M7 1L3.99943 4M3.99943 4L1 1M4 4L7 7"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <a
+                  href="#!"
+                  class="underline-offset-3 [text-decoration-skip-ink:none] hover:underline active:opacity-70"
+                >
+                  H1 Gamepad
+                </a>
+              </div>
+
+              <data value="550" class="text-center">$550</data>
+
+              <div class="flex justify-center">
+                <div
+                  class="border-primary/40 flex h-9 w-30 items-center rounded-sm border-[1.5px] px-3 md:h-11 md:w-18 md:items-stretch"
+                >
+                  <button
+                    type="button"
+                    aria-label="Decrease quantity"
+                    class="hover:text-accent active:text-accent flex size-5 shrink-0 items-center justify-center active:scale-110 md:hidden"
+                  >
+                    <svg
+                      class="size-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 12H19"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+
+                  <label for="qty-gamepad" class="sr-only">
+                    Quantity for H1 Gamepad
+                  </label>
+                  <input
+                    type="number"
+                    id="qty-gamepad"
+                    name="quantities[gamepad]"
+                    value="1"
+                    min="1"
+                    max="999"
+                    class="hide-spinners w-full bg-transparent text-center"
+                  />
+
+                  <button
+                    type="button"
+                    aria-label="Increase quantity"
+                    class="hover:text-accent active:text-accent flex size-5 shrink-0 items-center justify-center active:scale-110 md:hidden"
+                  >
+                    <svg
+                      class="size-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 5V19M5 12H19"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+
+                  <div class="hidden shrink-0 flex-col justify-center md:flex">
+                    <button
+                      type="button"
+                      aria-label="Increase quantity"
+                      class="hover:text-accent active:text-accent flex size-4 items-center justify-center active:-translate-y-px"
+                    >
+                      <svg
+                        width="9"
+                        height="6"
+                        viewBox="0 0 9 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.24267 1.88533L0.942667 5.18533L0 4.24267L4.24267 0L8.48533 4.24267L7.54267 5.18533L4.24267 1.88533Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      aria-label="Decrease quantity"
+                      class="hover:text-accent active:text-accent flex size-4 items-center justify-center active:translate-y-px"
+                    >
+                      <svg
+                        width="9"
+                        height="6"
+                        viewBox="0 0 9 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.24268 3.3L7.54268 0L8.48535 0.942666L4.24268 5.18533L1.71661e-05 0.942666L0.942683 0L4.24268 3.3Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <output
+                name="subtotal-gamepad"
+                for="qty-gamepad"
+                class="self-end font-semibold md:self-auto md:text-right md:font-normal"
+              >
+                $550
+              </output>
+            </div>
+          </li>
+
+          <li
+            class="flex items-start justify-center gap-6 rounded-sm p-6 shadow-[0_1px_13px_rgba(0,0,0,0.05)] md:justify-start lg:px-10"
+          >
+            <div class="relative aspect-50/39 w-12.5 md:hidden">
+              <img
+                src="./assets/images/jacket.webp"
+                alt=""
+                class="max-h-full object-contain"
+                width="546"
+                height="528"
+              />
+
+              <button
+                type="button"
+                aria-label="Remove Jacket from cart"
+                class="text-secondary bg-accent group absolute top-0 left-0 flex size-4.5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full transition hover:size-5 hover:scale-110 active:scale-[0.96]"
+              >
+                <svg
+                  class="size-2 transition group-hover:size-2.5"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 7L4 4M7 1L3.99943 4M3.99943 4L1 1M4 4L7 7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div
+              class="flex flex-col items-start gap-3 md:grid md:w-full md:grid-cols-4 md:items-center md:gap-0"
+            >
+              <div class="md:flex md:items-center md:gap-5.5">
+                <div class="relative hidden aspect-50/39 w-12.5 md:block">
+                  <img
+                    src="./assets/images/jacket.webp"
+                    alt=""
+                    class="max-h-full object-contain"
+                    width="546"
+                    height="528"
+                  />
+
+                  <button
+                    type="button"
+                    aria-label="Remove Jacket from cart"
+                    class="text-secondary bg-accent group absolute top-0 left-0 flex size-4.5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full transition hover:size-5 hover:scale-110 active:scale-[0.96]"
+                  >
+                    <svg
+                      class="size-2 transition group-hover:size-2.5"
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 7L4 4M7 1L3.99943 4M3.99943 4L1 1M4 4L7 7"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <a
+                  href="#!"
+                  class="underline-offset-3 [text-decoration-skip-ink:none] hover:underline active:opacity-70"
+                >
+                  Satin Jacket
+                </a>
+              </div>
+
+              <data value="750" class="text-center">$750</data>
+
+              <div class="flex justify-center">
+                <div
+                  class="border-primary/40 flex h-9 w-30 items-center rounded-sm border-[1.5px] px-3 md:h-11 md:w-18 md:items-stretch"
+                >
+                  <button
+                    type="button"
+                    aria-label="Decrease quantity"
+                    class="hover:text-accent active:text-accent flex size-5 shrink-0 items-center justify-center active:scale-110 md:hidden"
+                  >
+                    <svg
+                      class="size-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 12H19"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+
+                  <label for="qty-jacket" class="sr-only">
+                    Quantity for Jacket
+                  </label>
+                  <input
+                    type="number"
+                    id="qty-jacket"
+                    name="quantities[jacket]"
+                    value="1"
+                    min="1"
+                    max="999"
+                    class="hide-spinners w-full bg-transparent text-center"
+                  />
+
+                  <button
+                    type="button"
+                    aria-label="Increase quantity"
+                    class="hover:text-accent active:text-accent flex size-5 shrink-0 items-center justify-center active:scale-110 md:hidden"
+                  >
+                    <svg
+                      class="size-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 5V19M5 12H19"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+
+                  <div class="hidden shrink-0 flex-col justify-center md:flex">
+                    <button
+                      type="button"
+                      aria-label="Increase quantity"
+                      class="hover:text-accent active:text-accent flex size-4 items-center justify-center active:-translate-y-px"
+                    >
+                      <svg
+                        width="9"
+                        height="6"
+                        viewBox="0 0 9 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.24267 1.88533L0.942667 5.18533L0 4.24267L4.24267 0L8.48533 4.24267L7.54267 5.18533L4.24267 1.88533Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      aria-label="Decrease quantity"
+                      class="hover:text-accent active:text-accent flex size-4 items-center justify-center active:translate-y-px"
+                    >
+                      <svg
+                        width="9"
+                        height="6"
+                        viewBox="0 0 9 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.24268 3.3L7.54268 0L8.48535 0.942666L4.24268 5.18533L1.71661e-05 0.942666L0.942683 0L4.24268 3.3Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <output
+                name="subtotal-jacket"
+                for="qty-jacket"
+                class="self-end font-semibold md:self-auto md:text-right md:font-normal"
+              >
+                $750
+              </output>
+            </div>
+          </li>
+        </ul>
+
+        <div
+          class="text-primary @container mt-6 flex justify-between gap-4 text-base font-medium"
+        >
+          <a
+            href="/"
+            class="border-primary/50 hover:text-foreground-inverse hover:bg-primary rounded-sm border p-3 text-center transition-[scale] select-none active:scale-[0.96] @sm:px-10 @sm:py-4 @md:px-12"
+          >
+            Return To Shop
+          </a>
+
+          <button
+            type="submit"
+            class="border-primary/50 hover:text-foreground-inverse hover:bg-primary rounded-sm border p-3 transition-[scale] select-none active:scale-[0.96] @sm:px-10 @sm:py-4 @md:px-12"
+          >
+            Update Cart
+          </button>
+        </div>
+      </form>
+
+      <div
+        class="flex flex-col gap-10 @xl:flex-row @xl:items-start @xl:justify-between @xl:gap-2"
+      >
+        <form
+          action=""
+          method="POST"
+          class="xs:flex-row xs:items-center xs:justify-between flex flex-col gap-4 text-base @xl:flex-1 @xl:justify-start"
+        >
+          <label for="coupon" class="sr-only">Coupon Code</label>
+          <input
+            type="text"
+            id="coupon"
+            name="coupon"
+            placeholder="Coupon Code"
+            required
+            autocomplete="off"
+            spellcheck="false"
+            class="border-primary placeholder:text-primary/50 text-primary rounded-sm border p-4 placeholder:text-base @sm/layout:w-50 @sm/layout:px-6 @md/layout:w-75 @xl/layout:w-40 @3xl/layout:w-50 @5xl/layout:w-75"
+          />
+
+          <button
+            type="submit"
+            class="bg-accent text-foreground-inverse rounded-sm p-3 font-medium transition-[scale,opacity] select-none hover:opacity-90 active:scale-[0.96] @lg/layout:px-12 @lg/layout:py-4 @xl/layout:px-6 @3xl/layout:px-12 @4xl/layout:px-6 @5xl/layout:px-12"
+          >
+            Apply Coupon
+          </button>
+        </form>
+
+        <section
+          class="border-primary text-primary @container w-full rounded-sm border-[1.5px] px-6 py-8 text-base @xl/layout:max-w-60 @2xl/layout:max-w-75 @4xl/layout:max-w-117.5"
+        >
+          <h2 class="mb-6 text-lg font-medium">Cart Total</h2>
+
+          <dl class="flex flex-col gap-4">
+            <div class="border-primary/40 flex justify-between border-b pb-4">
+              <dt>Subtotal:</dt>
+              <dd><output name="cart-subtotal">$1950</output></dd>
+            </div>
+
+            <div class="border-primary/40 flex justify-between border-b pb-4">
+              <dt>Shipping:</dt>
+              <dd id="shipping-fee">Free</dd>
+            </div>
+
+            <div class="flex justify-between font-semibold">
+              <dt>Total:</dt>
+              <dd><output name="cart-total">$1950</output></dd>
+            </div>
+          </dl>
+
+          <div class="mt-4 flex justify-center">
+            <a
+              href="./checkout.html"
+              class="bg-accent text-foreground-inverse rounded-sm p-3 font-medium transition-[scale,opacity] select-none hover:opacity-90 active:scale-[0.96] @xs:px-12 @xs:py-4"
+            >
+              Proceed to checkout
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <app-footer></app-footer>
+  </body>
+</html>
