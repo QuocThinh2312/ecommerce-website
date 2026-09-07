@@ -39,7 +39,6 @@ export function initMenuDrawer() {
 
 export function initBackToTop() {
   const btn = document.createElement("button");
-  btn.id = "back-to-top";
   btn.setAttribute("aria-label", "Move to the top");
 
   btn.className =

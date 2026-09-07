@@ -47,8 +47,8 @@ export const initCartActions = () => {
   });
 
   productList.addEventListener("click", (e) => {
-    const increaseBtn = e.target.closest('[aria-label="Increase quantity"]');
-    const decreaseBtn = e.target.closest('[aria-label="Decrease quantity"]');
+    const increaseBtn = e.target.closest('button[aria-label="Increase quantity"]');
+    const decreaseBtn = e.target.closest('button[aria-label="Decrease quantity"]');
 
     if (!increaseBtn && !decreaseBtn) return;
 
